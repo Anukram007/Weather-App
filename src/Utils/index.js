@@ -1,7 +1,7 @@
 var animationPaths = require("../Components/Lotties/animationPaths");
 export const openWeatherKey = "faa3b9d358ff0e05601c8ec6ea446ef5";
 export const weatherUrl = "https://api.openweathermap.org/data/2.5/weather";
-export const forecastUrl = "https://api.openweathermap.org/data/2.5/forecast";
+export const forecastUrl = "https://api.openweathermap.org/data/2.5/forecast"
 
 export function getDays(data) {
   return new Intl.DateTimeFormat("en-US", { weekday: "short" }).format(data);
