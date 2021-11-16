@@ -1,6 +1,6 @@
 import React from "react";
 import Lottie from "react-lottie";
-import Header from "./Components/Header";
+import Header from "./Components/Header"
 import ComingWeatherForecast from "./Components/ComingWeatherForecast";
 import { setWeatherAnimation, openWeatherKey, weatherUrl } from './Utils/index';
 import "./Styles/main.css";
