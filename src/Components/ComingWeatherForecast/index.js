@@ -1,6 +1,6 @@
 import React from "react";
 import Lottie from "react-lottie";
-import "../../Styles/main.css"
+import "../../Styles/main.css";
 import { getDays, commonString, setWeatherAnimation, openWeatherKey, forecastUrl } from '../../Utils/index';
 
 class ComingWeatherForecast extends React.Component {
