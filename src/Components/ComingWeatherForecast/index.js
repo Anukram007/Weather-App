@@ -2,6 +2,7 @@ import React from "react";
 import Lottie from "react-lottie";
 import "../../Styles/main.css";
 import { getDays, commonString, setWeatherAnimation, openWeatherKey, forecastUrl } from '../../Utils/index';
+// import axios from "axios";
 
 class ComingWeatherForecast extends React.Component {
   constructor(props) {
@@ -26,12 +27,16 @@ class ComingWeatherForecast extends React.Component {
     }
   };
 
-  componentDidMount = () => {
+  componentDidMount = async () => {
     this.getWeather();
+    //To check the API data for Test Case
+    // console.log(await axios.get("https://api.openweathermap.org/data/2.5/forecast?&q=Kolkata&APPID=faa3b9d358ff0e05601c8ec6ea446ef5&units=metric").then(results => {
+    //   return JSON.stringify(results.data);
+    // }));
   };
 
   getWeather = () => {
-    
+
     // OpenWeather Info
     const urlToFetch = `${forecastUrl}?&q=${this.state.location
       }&APPID=${openWeatherKey}&units=${this.state.unit}`;

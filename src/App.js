@@ -4,6 +4,7 @@ import Header from "./Components/Header";
 import ComingWeatherForecast from "./Components/ComingWeatherForecast";
 import { setWeatherAnimation, openWeatherKey, weatherUrl } from './Utils/index';
 import "./Styles/main.css";
+// import axios from "axios";
 
 class App extends React.Component {
   constructor(props) {
@@ -39,8 +40,12 @@ class App extends React.Component {
     this.getWeather();
   };
 
-  componentDidMount = () => {
+  componentDidMount = async () => {
     this.getWeather();
+    //To check the API data for Test Case
+    // console.log(await axios.get("https://api.openweathermap.org/data/2.5/weather?&q=Kolkata&APPID=faa3b9d358ff0e05601c8ec6ea446ef5&units=metric").then(results => {
+    //   return JSON.stringify(results.data)
+    // }));
   };
 
   getWeather = () => {

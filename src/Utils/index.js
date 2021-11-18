@@ -31,7 +31,7 @@ export function setWeatherAnimation(weatherType) {
   return defaultOptions;
 };
 
-function getWeatherAnimation(weatherType) {
+export function getWeatherAnimation(weatherType) {
   switch (weatherType) {
     case "clear sky":
       return "sunny";
